@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
+/* Header */
+.headline {
+    margin-bottom: 160px;
+}
+.about {
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transition: all 0.2s ease;
+}
+.about .bg_links {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    backdrop-filter: blur(5px);
+    position: absolute;
+}
+.about .logo {
+    width: 40px;
+    height: 40px;
+    z-index: 9;
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
+    opacity: 0.9;
+    transition: all 1s 0.2s ease;
+    bottom: 0;
+    right: 0;
+}
+.about .social {
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+}
+.about .social .icon {
+    width: 100%;
+    height: 100%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    transition: all 0.2s ease, background-color 0.4s ease;
+    opacity: 0;
+    border-radius: 100%;
+}
+.about .social.insta {
+	transition: all 0.8s ease;
+}
+.about .social.insta .icon {
+    /* background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg); */
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/insta.svg);
+    /* background-image: url(https://github.com/rafaelavlucas/assets/blob/master/codepen/insta.svg); */
+}
+.about .social.youtube {
+    transition: all 0.3s ease;
+}
+.about .social.youtube .icon {
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/youtube.svg);
+}
+.about .social.linkedin {
+    transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
+}
+.about:hover {
+    width: 105px;
+    height: 105px;
+    transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .logo {
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+.about:hover .logo:hover {
+    background-color: var(--color-primary);
+}
+.about:hover .social {
+    opacity: 1;
+}
+.about:hover .social .icon {
+    opacity: 0.9;
+}
+.about:hover .social:hover {
+    background-size: 28px;
+}
+.about:hover .social:hover .icon {
+    background-size: 65%;
+    opacity: 1;
+}
+.about:hover .social.insta {
+    right: 0;
+    bottom: calc(100% - 40px);
+    transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.insta .icon:hover {
+    background-color: #698fb7;
+}
+.about:hover .social.youtube {
+    bottom: 45%;
+    right: 45%;
+    transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.youtube .icon:hover {
+    background-color: #ea4c89;
+}
+.about:hover .social.linkedin {
+    bottom: 0;
+    right: calc(100% - 40px);
+    transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin .icon:hover {
+    background-color: #0077b5;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: 0;
+}
+body {
+    font-family: "Raleway", sans-serif;
+}
+.mainNav {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #9197ae;
+    text-transform: uppercase;
+    padding: 0 40px;
+}
+@media screen and (max-width: 799px) {
+    .mainNav {
+        padding: 0 20px;
+}
+}
+.mainNav__logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.mainNav__links {
+    display: flex;
+}
+@media screen and (max-width: 799px) {
+    .mainNav__links {
+        display: none;
+}
+}
+.mainNav__link {
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: 600;
+    box-shadow: inset 0px -10px 0px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease, transform 0.2s ease;
+    padding: 2px 4px;
+    transform: translateY(0px);
+}
+.mainNav__link:hover {
+    transform: translateY(-5px);
+    box-shadow: inset 0px -20px 0px white;
+}
+.mainNav__icon {
+    background-image: url(https://rafaelalucas91.github.io/assets/icons/black/icon-141.svg);
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+@media screen and (max-width: 799px) {
+    .mainNav__icon {
+        display: block;
+}
+}
+.mainHeading {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 40px;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+@media screen and (max-width: 799px) {
+    .mainHeading {
+        padding: 0 20px;
+}
+}
+.mainHeading__content {
+    max-width: 1110px;
+    min-height: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+@media screen and (max-width: 799px) {
+    .mainHeading__content {
+        min-height: 500px;
+}
+}
+.mainHeading__text {
+    z-index: 1;
+    color: #637498;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    max-width: 620px;
+    margin-top: 100px;
+    width: 70%;
+    backdrop-filter: blur(8px);
+    animation: text 0.8s 0.6s ease backwards;
+    position: relative;
+}
+.mainHeading__text:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    animation: line 0.8s 0.6s ease backwards;
+}
+@keyframes line {
+    0% {
+        right: 0;
+        width: 100%;
+        opacity: 0;
+}
+}
+@media screen and (max-width: 799px) {
+    .mainHeading__text {
+        padding: 20px;
+        margin: 90px 0 40px 0;
+}
+}
+@keyframes text {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+}
+}
+.mainHeading__preTitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    color: #637498;
+}
+.mainHeading__title {
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    font-size: 40px;
+    color: #637498;
+}
+@media screen and (max-width: 799px) {
+    .mainHeading__title {
+        margin-bottom: 16px;
+        font-size: 28px;
+}
+}
+.mainHeading__description {
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    line-height: 26px;
+}
+@media screen and (max-width: 799px) {
+    .mainHeading__description {
+        font-size: 14px;
+}
+}
+.mainHeading__image {
+    right: 0;
+    max-width: 600px;
+    width: 60%;
+    height: 600px;
+    transform: translatey(100px);
+    position: absolute;
+    overflow: hidden;
+    animation: image 0.6s 0.2s ease backwards;
+}
+@media screen and (max-width: 799px) {
+    .mainHeading__image {
+        height: 480px;
+        width: 70%;
+        transform: translatey(80px);
+        right: -6%;
+}
+}
+@keyframes image {
+    0% {
+        opacity: 0;
+        transform: translatey(200px);
+}
+}
+.mainHeading__image:before, .mainHeading__image:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 100%;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    opacity: 1;
+    left: 0;
+}
+.mainHeading__image:before {
+    animation: imageBefore 1s 0.2s ease backwards;
+}
+@keyframes imageBefore {
+    0% {
+        height: 100%;
+        top: 0;
+}
+}
+.mainHeading__image:after {
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    height: 100%;
+    top: 0;
+    opacity: 0.2;
+}
+.mainHeading__image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Header */
+
+/* Section1 */
+.section1 {
+    padding: 60px 0;
+    background: var(--color-bg3);
+}
+
+.section1 .inner__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 .inner__image {
+    width: 45%;
+    height: auto;
+    border-radius: 15px 5px;
+    overflow: hidden;
+}
+
+.section1 .inner__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.section1 .inner__content {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.section1 .inner__content .inner__sub-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.section1 .inner__content .inner__title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--color-main);
+}
+
+.section1 .inner__content .inner__list {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.section1 .inner__list .inner__item {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 160px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+.section1 .inner__item i {
+    color: var(--color-primary);
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.section1 .inner__item span {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-main);
+}
+
+.section1 .inner__desc {
+    font-size: 16px;
+    color: var(--color-primary);
+}
+/* End Section1 */
+
+/* Section2 */
+.section2 {
+    padding: 60px;
+    background: var(--color-bg3);
+}
+
+.section2 .inner__wrap {
+    background: white;
+    border-radius: 5px 35px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .inner__content {
+    width: 50%;
+}
+
+.section2 .inner__content span {
+    font-size: 24px;
+    color: var(--color-primary);
+}
+.section2 .inner__content .inner__title {
+    font-size: 32px;
+    color: var(--color-main);
+    margin-top: 30px;
+}
+
+.section2 .inner__image {
+    width: 40%;
+    /* height: 100%; */
+    /* margin-left: 5%; */
+    margin-top: -40px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section2 .inner__image img {
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+/* End Section2 */
